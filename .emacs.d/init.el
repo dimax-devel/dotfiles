@@ -25,3 +25,4 @@
 (setq case-fold-search t)
 ;; テーマを有効化
 (load-theme 'zenburn t)
+

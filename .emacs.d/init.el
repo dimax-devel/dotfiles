@@ -1,4 +1,6 @@
 (require 'package)
+(fset 'package-desc-vers 'package--ac-desc-version)
+(package-initialize)
   
 ;; HTTP
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
@@ -6,10 +8,7 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/") t)
 
-(fset 'package-desc-vers 'package--ac-desc-version)
- 
-(package-initialize)
-
+;; 言語設定
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 
@@ -25,6 +24,8 @@
 (setq case-fold-search t)
 ;; テーマを有効化
 (load-theme 'zenburn t)
+;; C-hで一文字削除
+(global-set-key "\C-h" 'delete-backward-char)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -32,17 +33,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages (quote (magit zenburn-theme))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
-;; magit
-;; magit
+;; magit設定
 (defalias 'magit 'magit-status)
 (global-set-key "\C-xg" 'magit-status)
 
-;(setenv "GIT_EDITOR" "emacsclient")
-;(add-hook 'shell-mode-hook 'with-editor-export-git-editor)
+

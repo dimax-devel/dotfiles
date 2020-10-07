@@ -32,10 +32,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (magit zenburn-theme))))
+ '(package-selected-packages
+   (quote
+    (jekyll-modes python-mode dockerfile-mode yaml-mode magit zenburn-theme))))
 
 ;; magit設定
 (defalias 'magit 'magit-status)
 (global-set-key "\C-xg" 'magit-status)
 
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

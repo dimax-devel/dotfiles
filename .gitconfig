@@ -1,3 +1,5 @@
 [user]
 	email = dimax.devel@gmail.com
 	name = dimax
+[core]
+	editor = emacs -nw

@@ -79,11 +79,16 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (auto-complete jekyll-modes python-mode dockerfile-mode yaml-mode magit zenburn-theme))))
+    (migemo anzu ac-ispell auto-complete jekyll-modes python-mode dockerfile-mode yaml-mode magit zenburn-theme))))
 
 ;; magit設定
 (defalias 'magit 'magit-status)
 (global-set-key "\C-xg" 'magit-status)
+
+;; global-anzu有効
+(global-anzu-mode +1)
+;; migemo有効
+(setq anzu-use-migemo t)
 
 
 (custom-set-faces
